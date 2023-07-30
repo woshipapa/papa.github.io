@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <component-scan base-package="com.papa.Handler"></component-scan>
+    <component-scan base-package="com.papa.Service"></component-scan>
+    <bean class="com.papa.springMVC.view.viewResolver.InternalResourceViewResolver" name="internalResourceViewResolver">
+        <property name="prefix" value="/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+</beans>

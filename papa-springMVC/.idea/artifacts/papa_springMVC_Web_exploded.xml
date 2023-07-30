@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="papa-springMVC:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/papa_springMVC_Web_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="papa-springMVC" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="papa-springMVC/web/Web" />
+    </root>
+  </artifact>
+</component>
