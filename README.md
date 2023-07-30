@@ -1,3 +1,11 @@
 # papa.github.io
 web site
-这里是我手写的springMVC框架，是简易版本
+这里是我手写的springMVC框架，是简易版本，只能大体模拟执行的流程
+实现的基本功能:
+1.开发DispatcherServlet，并在web.xml中配置，可以拦截所有http请求，并且指定好contextConfigLocation这个property，也就是可以读取springMVC的配置文件。
+2.完成对springMVC的配置文件的读取，可以通过配置文件中配置的bean完成注入，也可以通过配置<component-scan>标签进行扫描包的方式来进行注入容器，这里其实是完成了ioc的机制，会完成对@Controller，@Service，@Autowired注解的解析，其他注解暂时还没有引入
+3.完成对@RequestMapping注解的解析，会建立url与handler的映射，handler中封装了url，Controller对象和method方法，以便在处理请求的时候找到目标类和方法
+4.完成了对HttpServletRequest，HttpServletResponse类型的参数的注入，以及对@RequstParam注解的实现，还有按照形参的名字去进行匹配请求参数的实现
+5.完成了简单的视图解析，这里写了俩个视图解析器，一个实现请求转发和默认机制，一个实现重定向redirect
+6.完成了@ResponseBody注解的简单实现，可以把List类型以Json格式返回响应体中
+使用的技术有dom4j解析xml文件，Java的反射+注解机制,Servlet
